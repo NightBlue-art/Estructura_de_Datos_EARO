@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package colas;
+
+/**
+ *
+ * @author Night
+ */
+public class ColaEstatica_EARO {
+    private static final int Size = 3;
+    protected int frente;
+    protected int fin;
+    protected Object[]Cola;
+    public ColaEstatica_EARO(){
+        frente=0;
+        fin = -1;
+        Cola = new Object[Size];
+    }
+    public boolean colaVacia(){
+        return frente > fin;
+    }
+    public boolean colaLlena(){
+        return fin == Size -1;
+    }
+    public void insertar(final Object elemento)throws Exception{
+        if(!colaLlena()){
+            Cola[++fin]= elemento;} 
+        else throw new Exception("Overflow en la cola");
+   }
+    public Object quitar()throws Exception{
+        if(!colaVacia()){
+            return Cola[frente++];
+        }else throw new Exception("Cola vacia");
+        }
+    public void borrarCola(){
+        frente = 0;
+        fin = -1;
+    }
+    public Object frenteCola()throws Exception{
+        if(!colaVacia()){
+            return Cola[frente];
+        }else throw new Exception("Cola vacia");
+    }
+    public static void main(String[] args)throws Exception{
+        ColaEstatica_EARO cola=new ColaEstatica_EARO();
+        System.out.println("Cola estatica");
+        try{
+            cola.insertar("Elemento");
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        try{
+            System.out.println(cola.quitar());
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        try {
+            System.out.println(cola.frenteCola());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        cola.borrarCola();
+        }
+}
