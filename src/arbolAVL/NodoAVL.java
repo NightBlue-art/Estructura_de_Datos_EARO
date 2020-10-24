@@ -13,7 +13,6 @@ import arbolBinarioOrdenado.Nodo;
  */
 public class NodoAVL extends Nodo{
     int fe;
-    public NodoAVL(Object valor){
         super(valor);
         fe = 0;
     }

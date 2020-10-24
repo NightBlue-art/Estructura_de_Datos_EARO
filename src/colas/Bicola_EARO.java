@@ -16,7 +16,10 @@ public class Bicola_EARO {
     public void ponerFinal(Object elemento){
         insertar(elemento);
     }
-    public void ponerFrente(Object elemento) {
+    public void colaVacia{
+        return colaVacia;
+    }
+    static void ponerFrente(Object elemento) {
         Nodo a;
         a = new Nodo(elemento);
         if(colaVacia()){
