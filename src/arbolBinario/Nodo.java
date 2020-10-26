@@ -15,6 +15,7 @@ public class Nodo {
     protected Nodo dcho;
     Nodo siguiente;
     Object elemento;
+    public Nodo enlace;
     public Nodo(Object valor){
         dato=valor;
         izdo=dcho=null;
