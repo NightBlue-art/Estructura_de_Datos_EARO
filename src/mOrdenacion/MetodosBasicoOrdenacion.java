@@ -68,7 +68,7 @@ public class MetodosBasicoOrdenacion {
             a[j]=aux;
         }
     }
-    public static void ordSeleccion(int[] a[]) {
+    public static void ordSeleccion(int a[]) {
         int indiceMenor, i,j,n;
         n = a.length;
         for (i = 0;  i< n-1; i++) {
@@ -77,7 +77,7 @@ public class MetodosBasicoOrdenacion {
                 if(a[j] <a [indiceMenor])
                     indiceMenor = j;
             if(i != indiceMenor)
-                intercambiar(a, i,indiceMenor);
+                intercambiar(a,i,indiceMenor);
         }
     }
 }
