@@ -10,7 +10,15 @@ package listas;
  * @author Night
  */
 public class Lista_EARO {
-   Nodo primero;
+ public  Nodo primero;
+   public void imprimirLista(){
+       Nodo n;
+       n = primero;
+       while(n != null){
+           System.out.println(n.dato +" ");
+           n = n.enlace;
+       }
+   }
      public Lista_EARO(){
          primero = null;
      }

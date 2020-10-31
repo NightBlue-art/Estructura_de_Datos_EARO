@@ -10,8 +10,8 @@ package listas;
  * @author Night
  */
 public class Nodo {
-    int dato;
-    Nodo enlace;
+    public int dato;
+    public Nodo enlace;
     public Nodo atras;
     public Nodo adelante;
     public String out;

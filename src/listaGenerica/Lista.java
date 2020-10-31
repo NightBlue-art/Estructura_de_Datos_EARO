@@ -13,7 +13,7 @@ import grafoL.Arco;
  * @author Night
  */
 public class Lista {
-    private Nodo primero;
+    public Nodo primero;
     public Lista(){
         primero =  null;
     }
@@ -67,5 +67,13 @@ public class Lista {
             if(indice.dato.equals(destino))
                 return indice;
         return null;
+    }
+
+    public void insertarPrimero(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void imprimirLista() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
